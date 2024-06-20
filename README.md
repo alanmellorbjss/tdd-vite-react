@@ -1,5 +1,8 @@
 # React + Vite
 
+_Note: Following tutorial at this link:_
+[TDD Vite Tutorial](https://blog.jonrshar.pe/2023/Dec/17/js-tdd-vite.html)
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
