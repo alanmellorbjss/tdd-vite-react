@@ -1,0 +1,17 @@
+.ships-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.ships-grid > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
