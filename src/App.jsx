@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Comment from "./Comment";
 import "./App.css";
-import Board from "./board/Board";
+import Ships from "./board/Ships";
 
 const App = () => {
   const [comments, setComments] = useState([]);
@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div>
-      <Board />
+      <Ships />
       <hr />
       <h2>Comments</h2>
       {comments.map((comment) => (
