@@ -1,12 +1,28 @@
 import * as React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 
-import Board from "./Ships.jsx";
+import Ships from "./Ships.jsx";
 
-describe("Board", () => {
-  it("Shows an empty 7x7 grid with no ships", () => {
-    render(<Board />);
+describe("Ships", () => {
+  const mockTakeShot = vi.fn();
 
-    screen.debug();
+  it("is a CSS grid container", () => {
+    render(<Ships onClick={mockTakeShot} />);
+
+    expect(screen.getByTestId("grid")).toHaveClass("ships-grid");
+  });
+
+  it("has a square G7", () => {
+    render(<Ships onClick={mockTakeShot} />);
+
+    expect(screen.getByTestId("G7")).toBeInTheDocument();
+  });
+
+  it("takes a shot when clicked", () => {
+    render(<Ships onClick={mockTakeShot} />);
+
+    fireEvent.click(screen.getByTestId("G7"));
+
+    expect(mockTakeShot).toHaveBeenCalledWith("G", "7");
   });
 });
