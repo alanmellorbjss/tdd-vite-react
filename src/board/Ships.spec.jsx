@@ -25,4 +25,6 @@ describe("Ships", () => {
 
     expect(mockTakeShot).toHaveBeenCalledWith("G", "7");
   });
+
+  it.todo("draws ships where placed");
 });
